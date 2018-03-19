@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 public class InitializerBean {
 
     public InitializerBean(UserService userService, PollService pollService, AnswerService answerService, PickService pickService) {
-        userService.addUser(new User("first", "first@email.com", "pass", 0, 0, 0));
-        userService.addUser(new User("second", "second@email.com", "pass", 0, 0, 0));
+        userService.addUser(new User("first", "first@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 0));
+        userService.addUser(new User("second", "second@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 0));
         pollService.addPoll(new Poll(userService.findUserById(1), "Where shoud I go jogging in Budapest?", Topic.Sport));
         pollService.addPoll(new Poll(userService.findUserById(2), "Which soft drink do you like the most?", Topic.Food));
         answerService.addAnswer(new Answer(pollService.findPollById(1), "Margaret island", 0));
