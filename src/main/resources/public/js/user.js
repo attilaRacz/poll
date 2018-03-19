@@ -15,7 +15,6 @@ window.onload = function(){
             data: JSON.stringify(data),
             success: function (response) {
                 if(JSON.parse(response)["valid"] === true){
-                    $('#login').modal('hide');
                     $(location).attr('href', window.location.href + "/poll");
                 } else {
                     $('.login_error').show();
@@ -23,7 +22,7 @@ window.onload = function(){
             },
             error: function(response) {
                 $('.login_error').empty();
-                $('.login_error').append("<p>Sorry :( Could not connect to the server.</p>");
+                $('.login_error').append("<p>Could not connect to the server.</p>");
                 $('.login_error').show();
                 console.log(response);
             }
