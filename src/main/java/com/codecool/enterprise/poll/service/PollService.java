@@ -1,9 +1,12 @@
 package com.codecool.enterprise.poll.service;
 
 import com.codecool.enterprise.poll.model.Poll;
+import com.codecool.enterprise.poll.model.User;
 import com.codecool.enterprise.poll.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class PollService {
@@ -21,5 +24,18 @@ public class PollService {
 
     public Poll getPoll(long id) {
         return pollRepository.findPollById(id);
+    }
+
+    public Poll findNewPoll(List<Long> ids, User user) {
+        if (pollRepository.findPollsByIdNotInAndUserNot(ids, user)!=null) {
+            System.out.println("in service:" + pollRepository.findPollsByIdNotInAndUserNot(ids, user).get(0).getQuestion());
+            return pollRepository.findPollsByIdNotInAndUserNot(ids, user).get(0);
+        }
+        System.out.println("in service: null");
+        return null;
+    }
+
+    public Poll findNewPoll(User user) {
+        return pollRepository.findPollByUserNot(user).get(0);
     }
 }

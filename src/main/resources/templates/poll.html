@@ -20,20 +20,25 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
-<p th:text="${poll.getQuestion()}"></p>
-<div>
-    <ul>
-        <li th:each="answer: ${answers}">
-            <div>
-                <strong class="primary-font" th:text="${answer.getAnswer()}"></strong>
-                <ul th:each="pick: ${picks}">
-                    <li th:if="${pick.getAnswer().getId()==answer.getId()}">
-                        <p th:text="${pick.getUser().getUserName()} + ': ' + ${pick.getComment()}"></p>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
+<div th:if="${poll==null}">
+    <p>Wow! We ran out of polls! Come back later for more! ;)</p>
+</div>
+<div th:unless="${poll==null}">
+    <p th:text="${poll.getQuestion()}"></p>
+    <div>
+        <ul>
+            <li th:each="answer: ${answers}">
+                <div>
+                    <strong class="primary-font" th:text="${answer.getAnswer()}"></strong>
+                    <ul th:each="pick: ${picks}">
+                        <li th:if="${pick.getAnswer().getId()==answer.getId()}">
+                            <p th:text="${pick.getUser().getUserName()} + ': ' + ${pick.getComment()}"></p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>

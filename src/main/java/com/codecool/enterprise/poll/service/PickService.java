@@ -3,6 +3,7 @@ package com.codecool.enterprise.poll.service;
 import com.codecool.enterprise.poll.model.Answer;
 import com.codecool.enterprise.poll.model.Pick;
 import com.codecool.enterprise.poll.model.Poll;
+import com.codecool.enterprise.poll.model.User;
 import com.codecool.enterprise.poll.repository.PickRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,9 @@ public class PickService {
 
     public Pick findPickByAnswer(Answer answer) {
         return pickRepository.findPickByAnswer(answer);
+    }
+
+    public List<Pick> findPicksByUser(User user) {
+        return pickRepository.findPicksByUser(user);
     }
 }

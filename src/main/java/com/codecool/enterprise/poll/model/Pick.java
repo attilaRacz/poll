@@ -9,7 +9,8 @@ public class Pick {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
+    //used to be many to one
+    @OneToOne
     @JoinColumn(name = "poll")
     private Poll poll;
 
