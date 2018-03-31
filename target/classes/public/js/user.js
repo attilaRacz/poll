@@ -1,6 +1,12 @@
 window.onload = function(){
     $('.login_error').hide();
 
+    var idCount = 1;
+    $('.answer').each(function() {
+        $(this).attr('id', 'a' + idCount);
+        idCount++;
+    });
+
     $('.login-button').click(function(event){
         event.preventDefault();
         let data = {

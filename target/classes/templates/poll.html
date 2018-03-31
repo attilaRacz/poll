@@ -23,21 +23,24 @@
 <div th:if="${poll==null}">
     <p>Wow! We ran out of polls! Come back later for more! ;)</p>
 </div>
-<div th:unless="${poll==null}">
-    <p th:text="${poll.getQuestion()}"></p>
-    <div>
-        <ul>
-            <li th:each="answer: ${answers}">
-                <div>
-                    <strong class="primary-font" th:text="${answer.getAnswer()}"></strong>
+<div id="mainContainer" class="container" th:unless="${poll==null}">
+    <div id="poll_form">
+        <h2 th:text="${poll.getQuestion()}"></h2>
+        <form action="/answer_poll" method="post">
+            <fieldset>
+                <div th:each="answer: ${answers}">
+
+                    <label th:text="${answer.getAnswer()}"/>
+                    <input type="radio" class="answer" id="id"/>
                     <ul th:each="pick: ${picks}">
                         <li th:if="${pick.getAnswer().getId()==answer.getId()}">
                             <p th:text="${pick.getUser().getUserName()} + ': ' + ${pick.getComment()}"></p>
                         </li>
                     </ul>
+
                 </div>
-            </li>
-        </ul>
+            </fieldset>
+        </form>
     </div>
 </div>
 </body>
