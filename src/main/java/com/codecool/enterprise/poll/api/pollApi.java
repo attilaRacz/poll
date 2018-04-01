@@ -6,6 +6,8 @@ import com.codecool.enterprise.poll.model.User;
 import com.codecool.enterprise.poll.service.PickService;
 import com.codecool.enterprise.poll.service.PollService;
 import com.codecool.enterprise.poll.service.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,8 +32,10 @@ public class pollApi { //for dom.js ajax call
     @Autowired
     private PickService pickService;
 
+    ObjectMapper mapper = new ObjectMapper();
+
     @RequestMapping(value = "/getpoll", method = RequestMethod.GET)
-    public Poll getOnePoll() {
+    public String getOnePoll() throws JsonProcessingException {
         if (session.getAttribute("id") == null) {
             return null; // what to return?
         } else {
@@ -42,7 +46,8 @@ public class pollApi { //for dom.js ajax call
             Poll poll = (answeredPollIds.size()>0) ?
                     pollService.findNewPoll(answeredPollIds, user) :
                     pollService.findNewPoll(user);
-            return poll;
+            System.out.println(mapper.writeValueAsString(poll));
+            return mapper.writeValueAsString(poll);
         }
     }
 }
