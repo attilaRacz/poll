@@ -1,8 +1,10 @@
 package com.codecool.enterprise.poll.api;
 
+import com.codecool.enterprise.poll.model.Answer;
 import com.codecool.enterprise.poll.model.Pick;
 import com.codecool.enterprise.poll.model.Poll;
 import com.codecool.enterprise.poll.model.User;
+import com.codecool.enterprise.poll.service.AnswerService;
 import com.codecool.enterprise.poll.service.PickService;
 import com.codecool.enterprise.poll.service.PollService;
 import com.codecool.enterprise.poll.service.UserService;
@@ -32,13 +34,15 @@ public class pollApi { //for dom.js ajax call
     @Autowired
     private PickService pickService;
 
-    ObjectMapper mapper = new ObjectMapper();
+    @Autowired
+    private AnswerService answerService;
+
+    @Autowired
+    private ObjectMapper mapper;
 
     @RequestMapping(value = "/getpoll", method = RequestMethod.GET)
     public String getOnePoll() throws JsonProcessingException {
-        if (session.getAttribute("id") == null) {
-            return null; // what to return?
-        } else {
+        if (session.getAttribute("id") != null) {
             Long userId = Long.parseLong(session.getAttribute("id"));
             User user = userService.findUserById(userId);
             List<Pick> pickList = pickService.findPicksByUser(user);
@@ -46,8 +50,26 @@ public class pollApi { //for dom.js ajax call
             Poll poll = (answeredPollIds.size()>0) ?
                     pollService.findNewPoll(answeredPollIds, user) :
                     pollService.findNewPoll(user);
-            System.out.println(mapper.writeValueAsString(poll));
             return mapper.writeValueAsString(poll);
         }
+        return null;
+    }
+
+    @RequestMapping(value = "/getanswers", method = RequestMethod.GET)
+    public String getAnswers() throws JsonProcessingException {
+        if (session.getAttribute("id") != null) {
+            Long userId = Long.parseLong(session.getAttribute("id"));
+            User user = userService.findUserById(userId);
+            List<Pick> pickList = pickService.findPicksByUser(user);
+            List<Long> answeredPollIds = pollService.findPollsByPicks(pickList);
+            Poll poll = (answeredPollIds.size() > 0) ?
+                    pollService.findNewPoll(answeredPollIds, user) :
+                    pollService.findNewPoll(user);
+            if (poll != null) {
+                List<Answer> answers = answerService.getAnswers(poll);
+                return mapper.writeValueAsString(answers);
+            }
+        }
+        return null;
     }
 }
