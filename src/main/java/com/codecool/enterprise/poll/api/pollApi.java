@@ -77,6 +77,6 @@ public class pollApi { //for dom.js ajax call
                 return mapper.writeValueAsString(picks);
             }
         }
-        return null;
+        return "no comment";
     }
 }

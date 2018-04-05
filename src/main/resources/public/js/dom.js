@@ -36,14 +36,8 @@ function showAnswers() {
             pollAnswers[j].addEventListener("click", function(event){
                 let clickedAnswer = this;
                 let clickedAnswerId = parseInt(clickedAnswer.id);
-                alert(clickedAnswerId);
-                let comments = getCommentsByAnswerId(clickedAnswerId);
-                let commentSection = "";
-                for (let k = 0; k < comments.length; k++) {
-                    commentSection +=
-                        `<div>${comments[j].comment}</div>`;
-                }
-                $("#comments").append(`${commentSection}`);
+                document.getElementById("comments").innerHTML = "";
+                getCommentsByAnswerId(clickedAnswerId);
             });
         }
     }, 1000)
@@ -57,7 +51,17 @@ function getCommentsByAnswerId(clickedAnswerId) {
         data: JSON.stringify(data),
         contentType: 'application/JSON',
         success: function(comments){
-            return comments;
+            if (comments !== "no comment") {
+                let allComments = JSON.parse(comments);
+                $.each(allComments, function(i, oneComment) {
+                    let commentSection = "";
+                    commentSection +=
+                        `<div>${allComments[i].comment}</div>`;
+                    $("#comments").append(`${commentSection}`);
+                })
+            } else {
+                $("#comments").append(`There is no comment on this answer.`);
+            }
         },
         error: function() {
             alert('error');
