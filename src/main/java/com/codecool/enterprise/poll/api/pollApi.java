@@ -1,9 +1,6 @@
 package com.codecool.enterprise.poll.api;
 
-import com.codecool.enterprise.poll.model.Answer;
-import com.codecool.enterprise.poll.model.Pick;
-import com.codecool.enterprise.poll.model.Poll;
-import com.codecool.enterprise.poll.model.User;
+import com.codecool.enterprise.poll.model.*;
 import com.codecool.enterprise.poll.service.AnswerService;
 import com.codecool.enterprise.poll.service.PickService;
 import com.codecool.enterprise.poll.service.PollService;
@@ -11,9 +8,7 @@ import com.codecool.enterprise.poll.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.codecool.enterprise.poll.session.UserSession;
 
 
@@ -70,6 +65,26 @@ public class pollApi { //for dom.js ajax call
                 return mapper.writeValueAsString(answers);
             }
         }
+        return null;
+    }
+
+    @RequestMapping(value = "/getcomments", method = RequestMethod.POST)
+    public String getComments(@RequestBody IdJSON idJSON) throws JsonProcessingException {
+        /*if (session.getAttribute("id") != null) {
+            Long userId = Long.parseLong(session.getAttribute("id"));
+            User user = userService.findUserById(userId);
+            List<Pick> pickList = pickService.findPicksByUser(user);
+            List<Long> answeredPollIds = pollService.findPollsByPicks(pickList);
+            Poll poll = (answeredPollIds.size() > 0) ?
+                    pollService.findNewPoll(answeredPollIds, user) :
+                    pollService.findNewPoll(user);
+            if (poll != null) {
+                List<Answer> answers = answerService.getAnswers(poll);
+                return mapper.writeValueAsString(answers);
+            }
+        }*/
+        System.out.println("in here");
+        System.out.println(idJSON.getId());
         return null;
     }
 }
