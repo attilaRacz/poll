@@ -15,5 +15,5 @@ public interface PickRepository extends JpaRepository<Pick, Long> {
 
     List<Pick> findPicksByUser(User user);
 
-    Pick findPickByAnswer(Answer answer);
+    List<Pick> findPicksByAnswer(Answer answer);
 }

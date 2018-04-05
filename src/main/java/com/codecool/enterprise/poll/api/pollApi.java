@@ -70,21 +70,13 @@ public class pollApi { //for dom.js ajax call
 
     @RequestMapping(value = "/getcomments", method = RequestMethod.POST)
     public String getComments(@RequestBody IdJSON idJSON) throws JsonProcessingException {
-        /*if (session.getAttribute("id") != null) {
-            Long userId = Long.parseLong(session.getAttribute("id"));
-            User user = userService.findUserById(userId);
-            List<Pick> pickList = pickService.findPicksByUser(user);
-            List<Long> answeredPollIds = pollService.findPollsByPicks(pickList);
-            Poll poll = (answeredPollIds.size() > 0) ?
-                    pollService.findNewPoll(answeredPollIds, user) :
-                    pollService.findNewPoll(user);
-            if (poll != null) {
-                List<Answer> answers = answerService.getAnswers(poll);
-                return mapper.writeValueAsString(answers);
+        if (session.getAttribute("id") != null) {
+            Answer answer = answerService.getAnswerById(idJSON.getId());
+            List<Pick> picks = pickService.findPicksByAnswer(answer);
+            if (picks.size() > 0) {
+                return mapper.writeValueAsString(picks);
             }
-        }*/
-        System.out.println("in here");
-        System.out.println(idJSON.getId());
+        }
         return null;
     }
 }

@@ -24,8 +24,8 @@ public class PickService {
         return pickRepository.findPicksByPoll(poll);
     }
 
-    public Pick findPickByAnswer(Answer answer) {
-        return pickRepository.findPickByAnswer(answer);
+    public List<Pick> findPicksByAnswer(Answer answer) {
+        return pickRepository.findPicksByAnswer(answer);
     }
 
     public List<Pick> findPicksByUser(User user) {
