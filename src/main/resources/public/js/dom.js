@@ -14,7 +14,7 @@ window.onload = function(){
         type: 'GET',
         dataType: 'json',
         success: function(answers){
-            var index = 1;
+            let index = 1;
             $.each(answers, function(i, oneAnswer){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
@@ -40,3 +40,14 @@ window.onload = function(){
         });
     }
 };
+
+function getCommentsByAnswerId(clickedAnswerId) {
+    $.ajax({
+        url: '/getcomments',
+        type: 'GET',
+        dataType: 'json',
+        success: function(comments){
+            return comments;
+        }
+    });
+}
