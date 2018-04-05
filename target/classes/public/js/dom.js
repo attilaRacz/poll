@@ -19,9 +19,24 @@ window.onload = function(){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
                     <input type="radio" name="answer" class="answer" id="${index}" />
-                    <br>`)
+                    <br>`);
                     index++;
             })
         }
     });
+
+    let pollAnswers = document.getElementsByClassName("answer");
+    for (let j = 0; j < pollAnswers.length; j++) {
+        pollAnswers[j].addEventListener("click", function(event){
+            let clickedAnswer = this;
+            let clickedAnswerId = parseInt(clickedAnswer.dataset['id']);
+            let comments = getCommentsByAnswerId(clickedAnswerId); //megcsinálni a methodot
+            let commentSection = "";
+            for (let k = 0; k < comments.length; k++) {
+                commentSection +=
+                    `<div>${comments[j].comment}</div>`;
+            }
+            $("#comments").append(`${commentSection}`);
+        });
+    }
 };
