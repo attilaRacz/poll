@@ -15,7 +15,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <script defer="defer" src="/js/user.js"></script>
     <script defer="defer" src="/js/dom.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
@@ -29,7 +28,12 @@
             </fieldset>
         </form>
     </div>
+    <div>
+        <button class="pick-button" type="button">Choose</button>
+    </div>
     <div id="comments_container">
+        <h4>Your comment:</h4>
+        <input id="user_comment" name="user_comment" placeholder="Write your comment here..."/>
         <h4>Comments on this answer:</h4>
         <ul id="comments">
         </ul>

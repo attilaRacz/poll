@@ -1,6 +1,7 @@
 window.onload = function(){
     showPoll();
     showAnswers();
+    fireButton();
 };
 
 function showPoll() {
@@ -73,6 +74,30 @@ function getCommentsByAnswerId(clickedAnswerId) {
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
         }
+    });
+}
+
+function fireButton() {
+    $('.pick-button').click(function(event){
+        event.preventDefault();
+        let data = {
+            'pick': $('input[name=answer]:checked').val(),
+            'comment': $('#user_comment').val()
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/save_answer',
+            contentType: 'application/JSON',
+            data: JSON.stringify(data),
+            success: function (response) {
+                console.log("Pick post request sent to server" + data)
+                $(location).attr('href', window.location.href + "/poll");
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus + " " + errorThrown)
+            }
+        });
     });
 }
 
