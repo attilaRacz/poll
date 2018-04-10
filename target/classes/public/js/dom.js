@@ -14,7 +14,7 @@ function showPoll() {
                 $("#poll").append(`${poll.question}`)
             } else {
                 $("#mainContainer").hide();
-                document.body.innerHTML += '<div class="container"><h2>You answered all th polls, thank you! Come back later for more!</h2></div>';
+                document.body.innerHTML += '<div class="container"><h2>You answered all the polls, thank you! Come back later for more!</h2></div>';
             }
 
         },
@@ -34,6 +34,7 @@ function showAnswers() {
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
                     <input type="radio" name="answer" class="anAnswer" value="${answers[i].id}" id="${answers[i].id}"/>
+                    votes: ${answers[i].score}
                     <br>`);
             });
             showComments();
@@ -69,12 +70,14 @@ function getCommentsByAnswerId(clickedAnswerId) {
                 let allComments = JSON.parse(comments);
                 $.each(allComments, function(i, oneComment) {
                     let commentSection = "";
-                    commentSection +=
-                        `<li>${allComments[i].comment}</li>`;
-                    $("#comments").append(`${commentSection}`);
+                    if (oneComment.comment.length>0) {
+                        commentSection +=
+                            `<li><strong>${allComments[i].user.userName}:</strong> ${allComments[i].comment}</li>`;
+                        $("#comments").append(`${commentSection}`);
+                    }
                 })
             } else {
-                $("#comments").append(`<li>There is no comment on this answer.</li>`);
+                $("#comments").append(`<li><i>There is no comment on this answer.</i></li>`);
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
@@ -91,19 +94,23 @@ function fireButton() {
             'comment': $('#user_comment').val()
         };
 
-        $.ajax({
-            type: 'POST',
-            url: '/save_answer',
-            contentType: 'application/JSON',
-            data: JSON.stringify(data),
-            success: function (response) {
-                console.log("Pick post request sent to server" + data)
-                $(location).attr('href', window.location.href + "/");
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(textStatus + " " + errorThrown)
-            }
-        });
+        if (!data.id) {
+            alert("Pick an answer first");
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '/save_answer',
+                contentType: 'application/JSON',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log("Pick post request sent to server" + data)
+                    $(location).attr('href', window.location.href + "/");
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + " " + errorThrown)
+                }
+            });
+        }
     });
 }
 
