@@ -20,39 +20,20 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
-<div th:if="${poll==null}">
-    <p>Wow! We ran out of polls! Come back later for more! ;)</p>
-</div>
-<div id="mainContainer" class="container" th:unless="${poll==null}">
-    <div id="poll_form">
-        <p th:text="${poll.getQuestion()}"></p>
-        <form action="/answer_poll" method="post">
-            <fieldset>
-                <div th:each="answer: ${answers}">
-                    <label th:text="${answer.getAnswer()}"/>
-                    <input type="radio" class="answer" id="id"/>
-                    <ul th:each="pick: ${picks}">
-                        <li th:if="${pick.getAnswer().getId()==answer.getId()}">
-                            <p th:text="${pick.getUser().getUserName()} + ': ' + ${pick.getComment()}"></p>
-                        </li>
-                    </ul>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-</div>
-
 <div id="mainContainer" class="container">
     <div id="poll_form">
+        <h4 id="user"></h4>
         <h2 id="poll"></h2>
         <form action="/answer_poll" method="post">
             <fieldset id="answer">
             </fieldset>
         </form>
     </div>
+    <div id="comments_container">
+        <h4>Comments on this answer:</h4>
+        <ul id="comments">
+        </ul>
+    </div>
 </div>
-<div id="comments">
-</div>
-
 </body>
 </html>

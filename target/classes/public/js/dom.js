@@ -9,8 +9,11 @@ function showPoll() {
         type: 'GET',
         dataType: 'json',
         success: function(poll){
-            $("#poll").append(`${poll.question}`
-            )
+            $("#user").append(`question by <strong>${poll.user.userName}</strong>`);
+            $("#poll").append(`${poll.question}`)
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + " " + errorThrown)
         }
     });
 }
@@ -26,21 +29,25 @@ function showAnswers() {
                     <label>${answers[i].answer}</label>
                     <input type="radio" name="answer" class="anAnswer" id="${answers[i].id}" />
                     <br>`);
-            })
+            });
+            showComments();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + " " + errorThrown)
         }
     });
+}
 
-    setTimeout(function showComments() {
-        let pollAnswers = document.getElementsByClassName("anAnswer");
-        for (let j = 0; j < pollAnswers.length; j++) {
-            pollAnswers[j].addEventListener("click", function(event){
-                let clickedAnswer = this;
-                let clickedAnswerId = parseInt(clickedAnswer.id);
-                document.getElementById("comments").innerHTML = "";
-                getCommentsByAnswerId(clickedAnswerId);
-            });
-        }
-    }, 1000)
+function showComments() {
+    let pollAnswers = document.getElementsByClassName("anAnswer");
+    for (let j = 0; j < pollAnswers.length; j++) {
+        pollAnswers[j].addEventListener("click", function(event){
+            let clickedAnswer = this;
+            let clickedAnswerId = parseInt(clickedAnswer.id);
+            document.getElementById("comments").innerHTML = "";
+            getCommentsByAnswerId(clickedAnswerId);
+        });
+    }
 }
 
 function getCommentsByAnswerId(clickedAnswerId) {
@@ -56,15 +63,15 @@ function getCommentsByAnswerId(clickedAnswerId) {
                 $.each(allComments, function(i, oneComment) {
                     let commentSection = "";
                     commentSection +=
-                        `<div>${allComments[i].comment}</div>`;
+                        `<li>${allComments[i].comment}</li>`;
                     $("#comments").append(`${commentSection}`);
                 })
             } else {
-                $("#comments").append(`There is no comment on this answer.`);
+                $("#comments").append(`<li>There is no comment on this answer.</li>`);
             }
         },
-        error: function() {
-            alert('error');
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + " " + errorThrown)
         }
     });
 }
