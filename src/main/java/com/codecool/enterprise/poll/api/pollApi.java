@@ -95,7 +95,6 @@ public class pollApi { //for dom.js ajax call
         Poll poll = answer.getPoll();
         Pick pick = new Pick(poll, answer, user, answerData.getComment());
         pickService.addPick(pick);
-        System.out.println(answerData.getId() + " " + answerData.getComment());
         return "ok";
     }
 }
