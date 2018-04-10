@@ -84,10 +84,18 @@ public class pollApi { //for dom.js ajax call
 
     @PostMapping(value = "/save_answer")
     public String login(@RequestBody AnswerJSON answerData) {
-        //update the score of the answer
         //update the credit of the user
+        Long userId = Long.parseLong(session.getAttribute("id"));
+        User user = userService.findUserById(userId);
+        user.changeCredit(1);
+        //update the score of the answer
+        Answer answer = answerService.getAnswerById(answerData.getId());
+        answer.changeScore(1);
         //persist the pick
-        System.out.println(answerData.getAnswer() + " " + answerData.getComment());
+        Poll poll = answer.getPoll();
+        Pick pick = new Pick(poll, answer, user, answerData.getComment());
+        pickService.addPick(pick);
+        System.out.println(answerData.getId() + " " + answerData.getComment());
         return "ok";
     }
 }

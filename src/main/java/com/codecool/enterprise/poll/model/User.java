@@ -89,4 +89,8 @@ public class User {
         this.questionsAsked = questionsAsked;
     }
 
+    public void changeCredit(int toAdd) {
+        this.credit += toAdd;
+    }
+
 }

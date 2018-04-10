@@ -29,11 +29,9 @@ public class PollService {
     }
 
     public Poll findNewPoll(List<Long> ids, User user) {
-        if (pollRepository.findPollsByIdNotInAndUserNot(ids, user)!=null) {
-            System.out.println("in service:" + pollRepository.findPollsByIdNotInAndUserNot(ids, user).get(0).getQuestion());
+        if (pollRepository.findPollsByIdNotInAndUserNot(ids, user).size()>0) {
             return pollRepository.findPollsByIdNotInAndUserNot(ids, user).get(0);
         }
-        System.out.println("in service: null");
         return null;
     }
 

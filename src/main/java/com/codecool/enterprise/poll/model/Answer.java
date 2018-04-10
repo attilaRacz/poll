@@ -56,4 +56,8 @@ public class Answer {
     public void setScore(int score) {
         this.score = score;
     }
+
+    public void changeScore(int toAdd) {
+        this.score += toAdd;
+    }
 }

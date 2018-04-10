@@ -9,8 +9,14 @@ function showPoll() {
         type: 'GET',
         dataType: 'json',
         success: function(poll){
-            $("#user").append(`question by <strong>${poll.user.userName}</strong>`);
-            $("#poll").append(`${poll.question}`)
+            if (poll !== null) {
+                $("#user").append(`question by <strong>${poll.user.userName}</strong>`);
+                $("#poll").append(`${poll.question}`)
+            } else {
+                $("#mainContainer").hide();
+                document.body.innerHTML += '<div class="container"><h2>You answered all the polls, thank you! Come back later for more!</h2></div>';
+            }
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
@@ -27,7 +33,7 @@ function showAnswers() {
             $.each(answers, function(i, oneAnswer){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
-                    <input type="radio" name="answer" class="anAnswer" value="${answers[i].answer}" id="${answers[i].id}"/>
+                    <input type="radio" name="answer" class="anAnswer" value="${answers[i].id}" id="${answers[i].id}"/>
                     <br>`);
             });
             showComments();
@@ -81,7 +87,7 @@ function fireButton() {
     $('.pick-button').click(function(event){
         event.preventDefault();
         let data = {
-            'answer': $('input[name=answer]:checked').val(),
+            'id': $('input[name=answer]:checked').val(),
             'comment': $('#user_comment').val()
         };
 
