@@ -14,6 +14,8 @@ import com.codecool.enterprise.poll.session.UserSession;
 
 import java.util.List;
 
+import static com.codecool.enterprise.poll.util.JsonUtil.toJson;
+
 @RestController
 public class pollApi { //for dom.js ajax call
 
@@ -78,5 +80,14 @@ public class pollApi { //for dom.js ajax call
             }
         }
         return "no comment";
+    }
+
+    @PostMapping(value = "/save_answer")
+    public String login(@RequestBody AnswerJSON answerData) {
+        //update the score of the answer
+        //update the credit of the user
+        //persist the pick
+        System.out.println(answerData.getAnswer() + " " + answerData.getComment());
+        return "ok";
     }
 }

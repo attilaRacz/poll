@@ -1,7 +1,6 @@
 window.onload = function(){
     showPoll();
     showAnswers();
-    fireButton();
 };
 
 function showPoll() {
@@ -28,7 +27,7 @@ function showAnswers() {
             $.each(answers, function(i, oneAnswer){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
-                    <input type="radio" name="answer" class="anAnswer" id="${answers[i].id}" />
+                    <input type="radio" name="answer" class="anAnswer" value="${answers[i].answer}" id="${answers[i].id}"/>
                     <br>`);
             });
             showComments();
@@ -49,6 +48,7 @@ function showComments() {
             getCommentsByAnswerId(clickedAnswerId);
         });
     }
+    fireButton();
 }
 
 function getCommentsByAnswerId(clickedAnswerId) {
@@ -81,7 +81,7 @@ function fireButton() {
     $('.pick-button').click(function(event){
         event.preventDefault();
         let data = {
-            'pick': $('input[name=answer]:checked').val(),
+            'answer': $('input[name=answer]:checked').val(),
             'comment': $('#user_comment').val()
         };
 
@@ -92,7 +92,7 @@ function fireButton() {
             data: JSON.stringify(data),
             success: function (response) {
                 console.log("Pick post request sent to server" + data)
-                $(location).attr('href', window.location.href + "/poll");
+                $(location).attr('href', window.location.href + "/");
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log(textStatus + " " + errorThrown)
