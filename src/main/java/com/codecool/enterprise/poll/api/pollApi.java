@@ -52,6 +52,17 @@ public class pollApi { //for dom.js ajax call
         return null;
     }
 
+    @RequestMapping(value = "/getmypoll", method = RequestMethod.GET)
+    public String getMyPoll() throws JsonProcessingException {
+        if (session.getAttribute("id") != null) {
+            Long userId = Long.parseLong(session.getAttribute("id"));
+            User user = userService.findUserById(userId);
+            Poll poll = pollService.findMyPoll(user);
+            return mapper.writeValueAsString(poll);
+        }
+        return null;
+    }
+
     @RequestMapping(value = "/getanswers", method = RequestMethod.GET)
     public String getAnswers() throws JsonProcessingException {
         if (session.getAttribute("id") != null) {
@@ -62,6 +73,20 @@ public class pollApi { //for dom.js ajax call
             Poll poll = (answeredPollIds.size() > 0) ?
                     pollService.findNewPoll(answeredPollIds, user) :
                     pollService.findNewPoll(user);
+            if (poll != null) {
+                List<Answer> answers = answerService.getAnswers(poll);
+                return mapper.writeValueAsString(answers);
+            }
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/getmyanswers", method = RequestMethod.GET)
+    public String getMyAnswers() throws JsonProcessingException {
+        if (session.getAttribute("id") != null) {
+            Long userId = Long.parseLong(session.getAttribute("id"));
+            User user = userService.findUserById(userId);
+            Poll poll = pollService.findMyPoll(user);;
             if (poll != null) {
                 List<Answer> answers = answerService.getAnswers(poll);
                 return mapper.writeValueAsString(answers);

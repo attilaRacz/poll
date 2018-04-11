@@ -33,7 +33,7 @@ function showAnswers() {
             $.each(answers, function(i, oneAnswer){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
-                    <input type="radio" name="answer" class="anAnswer" value="${answers[i].id}" id="${answers[i].id}"/>
+                    <input type="radio" class="anAnswer" id="${answers[i].id}"/>
                     votes: ${answers[i].score}
                     <br>`);
             });

@@ -15,4 +15,5 @@ public interface PollRepository extends JpaRepository<Poll, Long> {
 
     List<Poll> findPollsByIdNotInAndUserNot(List<Long> ids, User user);
 
+    Poll findPollByUser(User user);
 }

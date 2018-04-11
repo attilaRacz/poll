@@ -35,6 +35,10 @@ public class PollService {
         return null;
     }
 
+    public Poll findMyPoll(User user) {
+        return pollRepository.findPollByUser(user);
+    };
+
     public Poll findNewPoll(User user) {
         return pollRepository.findPollByUserNot(user).get(0);
     }
