@@ -15,7 +15,7 @@ window.onload = function(){
             data: JSON.stringify(data),
             success: function (response) {
                 if(JSON.parse(response)["valid"] === true){
-                    $(location).attr('href', window.location.href + "/poll");
+                    $(location).attr('href', window.location.href + "/dashboard");
                 } else {
                     $('.login_error').show();
                 }

@@ -41,7 +41,12 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = "/poll", method = RequestMethod.GET)
+    @RequestMapping(value = "/dashboard")
+    public String renderDashboard() {
+        return "mypoll";
+    }
+
+    @RequestMapping(value = "/answer", method = RequestMethod.GET)
     public String renderPoll(Model model) {
         if (session.getAttribute("id") == null) {
             return "redirect:/";
@@ -61,7 +66,7 @@ public class UserController {
                 model.addAttribute("answers", answers);
                 model.addAttribute("picks", picks);
             }
-            return "poll";
+            return "answer";
         }
     }
 }
