@@ -17,7 +17,7 @@ function showPoll() {
                 $("#mainContainer").hide();
                 document.body.innerHTML += '<div class="container"><h2>You answered all the polls, thank you! Come back later for more!</h2></div>';
             }
-
+            fireToMyPollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
