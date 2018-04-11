@@ -1,6 +1,7 @@
 window.onload = function(){
     showPoll();
     showAnswers();
+    fireToMyPollBtn();
 };
 
 function showPoll() {
@@ -33,7 +34,7 @@ function showAnswers() {
             $.each(answers, function(i, oneAnswer){
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
-                    <input type="radio" class="anAnswer" id="${answers[i].id}"/>
+                    <input type="radio" name="answer" class="anAnswer" value="${answers[i].id}" id="${answers[i].id}"/>
                     votes: ${answers[i].score}
                     <br>`);
             });
@@ -103,7 +104,7 @@ function fireButton() {
                 contentType: 'application/JSON',
                 data: JSON.stringify(data),
                 success: function (response) {
-                    console.log("Pick post request sent to server" + data)
+                    console.log("Pick post request sent to server" + data);
                     $(location).attr('href', window.location.href + "/");
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
@@ -112,5 +113,11 @@ function fireButton() {
             });
         }
     });
+}
+
+function fireToMyPollBtn() {
+    $('.mypoll-button').click(function(event){
+        $(location).attr('href', "/dashboard");
+    })
 }
 

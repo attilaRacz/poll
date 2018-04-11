@@ -43,6 +43,9 @@ public class UserController {
 
     @RequestMapping(value = "/dashboard")
     public String renderDashboard() {
+        if (session.getAttribute("id") == null) {
+            return "redirect:/";
+        }
         return "mypoll";
     }
 

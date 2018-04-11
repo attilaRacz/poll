@@ -2,7 +2,7 @@ window.onload = function(){
     fireChangePollBtn();
     fireAnswerBtn();
     showPoll();
-    showAnswers()
+    showAnswers();
 };
 
 function fireChangePollBtn() {
