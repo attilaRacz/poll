@@ -5,14 +5,16 @@ window.onload = function(){
     showAnswers();
 };
 
+var answerNumber = 0;
+
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
-        //show textareas where you can give the question plus add answers
-        //save the new poll
         //empty the poll and answers html
         emptyPollBody();
-        showPoll();
-        showAnswers();
+        //todo - show textareas where you can give the question plus add answers
+        showPollEdit();
+        //todo - save the new poll
+
     })
 }
 
@@ -35,12 +37,39 @@ function showPoll() {
                 $("#mainContainer").hide();
                 document.body.innerHTML += '<div class="container"><h2>You do not have an active poll right now.</h2></div>';
             }
-
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
         }
     });
+}
+
+function showPollEdit() {
+    $.ajax({
+        url: '/getmypoll',
+        type: 'GET',
+        dataType: 'json',
+        success: function(poll){
+            if (poll !== null) {
+                $("#user").append(`hello <strong>${poll.user.userName}</strong>, edit your question here:`);
+                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="${poll.question}"/>`);
+            } else {
+                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Give the question of your poll"/>`);
+            }
+            $("#answer").append(`<div><button class="newanswer-button" type="button">Add new answer</button></div>`);
+            fireAddNewAnswerBtn();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + " " + errorThrown)
+        }
+    });
+}
+
+function fireAddNewAnswerBtn() {
+    $('.newanswer-button').click(function(event){
+        answerNumber += 1;
+        $("#answer").append(`<input id="poll_answer_` + answerNumber + `" name="poll_answer_` + answerNumber + `" placeholder="Answer ` + answerNumber + `" /></br>`);
+    })
 }
 
 function showAnswers() {
