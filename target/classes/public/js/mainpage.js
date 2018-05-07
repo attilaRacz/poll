@@ -57,12 +57,43 @@ function showPollEdit() {
                 $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Give the question of your poll"/>`);
             }
             $("#answer").append(`<div><button class="newanswer-button" type="button">Add new answer</button></div>`);
+            $("#answer").append(`<div><button class="savepoll-button" type="button">Save poll</button></div>`);
             fireAddNewAnswerBtn();
+            fireSavePollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
         }
     });
+}
+
+function fireSavePollBtn() {
+    $('.savepoll-button').click(function(event){
+        //todo - send poll data to server
+        let data = {
+            'question': $('#poll_question').val(),
+            //todo - get all answers and organise them into JSON
+        };
+
+        if (!data.question) {
+            alert("Give a title for your poll!");
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '/edit_poll',
+                contentType: 'application/JSON',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log("Poll edit request sent to server" + data);
+                    //todo - just simply show my poll with AJAX
+                    $(location).attr('href', window.location.href + "/");
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + " YEEEEEEEEEEEEEE " + errorThrown)
+                }
+            });
+        }
+    })
 }
 
 function fireAddNewAnswerBtn() {

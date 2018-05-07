@@ -71,9 +71,14 @@
       <file leaf-file-name="dom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/dom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="120" column="6" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="120" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="116">
+              <caret line="93" column="56" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="56" />
+              <folding>
+                <element signature="n#!!block;n#showPoll#0" expanded="false" />
+                <element signature="n#!!block;n#showAnswers#0" expanded="false" />
+                <element signature="n#!!block;n#showComments#0" expanded="false" />
+                <element signature="n#!!block;n#getCommentsByAnswerId#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,8 +86,8 @@
       <file leaf-file-name="mainpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+            <state relative-caret-position="260">
+              <caret line="91" column="46" lean-forward="false" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -113,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jq</find>
       <find>in</find>
       <find>all</find>
       <find>answer_</find>
@@ -141,8 +145,9 @@
       <find>btn</find>
       <find>butt</find>
       <find>mypoll</find>
-      <find>mypo</find>
       <find>fireAddNewAnswerBtn</find>
+      <find>fire</find>
+      <find>mypo</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -183,11 +188,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/dom.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/PollService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/InitializerBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/pollApi.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/dom.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
       </list>
     </option>
@@ -521,12 +526,12 @@
       <workItem from="1523443048058" duration="6888000" />
       <workItem from="1523603691318" duration="2026000" />
       <workItem from="1524040233028" duration="1831000" />
-      <workItem from="1525679745047" duration="11557000" />
+      <workItem from="1525679745047" duration="13505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95203000" />
+    <option name="totallyTimeSpent" value="97151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="40" width="1368" height="723" extended-state="6" />
@@ -546,9 +551,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -890,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/36c6297a/566208b9-e316-47f8-9d28-8c74f7162de6/pollapp.public.poll">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/InitializerBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1011,18 +1009,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/36c6297a/566208b9-e316-47f8-9d28-8c74f7162de6/pollapp.public.poll">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/dom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="120" column="6" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="120" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="116">
+          <caret line="93" column="56" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!block;n#showPoll#0" expanded="false" />
+            <element signature="n#!!block;n#showAnswers#0" expanded="false" />
+            <element signature="n#!!block;n#showComments#0" expanded="false" />
+            <element signature="n#!!block;n#getCommentsByAnswerId#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        <state relative-caret-position="260">
+          <caret line="91" column="46" lean-forward="false" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
           <folding />
         </state>
       </provider>
