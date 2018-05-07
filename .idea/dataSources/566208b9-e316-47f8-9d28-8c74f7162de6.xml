@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="pollapp@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="pollapp">
+      <ObjectId>160533</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12413</ObjectId>
+    </database>
+    <database id="4" parent="1" name="daniel">
+      <ObjectId>16388</ObjectId>
+    </database>
+    <database id="5" parent="1" name="todolist02">
+      <ObjectId>102944</ObjectId>
+    </database>
+    <database id="6" parent="1" name="codecooler">
+      <ObjectId>119430</ObjectId>
+    </database>
+    <database id="7" parent="1" name="raczattila">
+      <ObjectId>119441</ObjectId>
+    </database>
+    <database id="8" parent="1" name="askmate">
+      <ObjectId>119531</ObjectId>
+    </database>
+    <database id="9" parent="1" name="starwars_api">
+      <ObjectId>119694</ObjectId>
+    </database>
+    <database id="10" parent="1" name="pa">
+      <ObjectId>119812</ObjectId>
+    </database>
+    <database id="11" parent="1" name="proman">
+      <ObjectId>120525</ObjectId>
+    </database>
+    <database id="12" parent="1" name="todolist">
+      <ObjectId>120565</ObjectId>
+    </database>
+    <database id="13" parent="1" name="codecoolshop">
+      <ObjectId>120576</ObjectId>
+    </database>
+    <database id="14" parent="1" name="test">
+      <ObjectId>137331</ObjectId>
+    </database>
+    <database id="15" parent="1" name="codecoolshop02">
+      <ObjectId>137798</ObjectId>
+    </database>
+    <database id="16" parent="1" name="jpaexampleDB">
+      <ObjectId>138191</ObjectId>
+    </database>
+    <database id="17" parent="1" name="datingsite">
+      <ObjectId>138925</ObjectId>
+    </database>
+    <database id="18" parent="1" name="sampleDB">
+      <ObjectId>154011</ObjectId>
+    </database>
+    <schema id="19" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-05-07.10:06:11.918</IntrospectionTimestamp>
+      <IntrospectionStateNumber>240499</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="20" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="22" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="23" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="24" parent="2" name="information_schema">
+      <ObjectId>12121</ObjectId>
+    </schema>
+    <sequence id="25" parent="19" name="answer_id_seq">
+      <ObjectId>179563</ObjectId>
+      <StateNumber>240491</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="26" parent="19" name="pick_id_seq">
+      <ObjectId>179571</ObjectId>
+      <StateNumber>240492</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="27" parent="19" name="poll_id_seq">
+      <ObjectId>179579</ObjectId>
+      <StateNumber>240493</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="28" parent="19" name="users_id_seq">
+      <ObjectId>179590</ObjectId>
+      <StateNumber>240494</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="29" parent="19" name="answer">
+      <ObjectId>179565</ObjectId>
+      <StateNumber>240496</StateNumber>
+    </table>
+    <table id="30" parent="19" name="pick">
+      <ObjectId>179573</ObjectId>
+      <StateNumber>240498</StateNumber>
+    </table>
+    <table id="31" parent="19" name="poll">
+      <ObjectId>179581</ObjectId>
+      <StateNumber>240499</StateNumber>
+    </table>
+    <table id="32" parent="19" name="users">
+      <ObjectId>179592</ObjectId>
+      <StateNumber>240499</StateNumber>
+    </table>
+    <column id="33" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240491</StateNumber>
+      <SequenceName>answer_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;answer_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="34" parent="29" name="answer">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240491</StateNumber>
+    </column>
+    <column id="35" parent="29" name="score">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240491</StateNumber>
+    </column>
+    <column id="36" parent="29" name="poll">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>240491</StateNumber>
+    </column>
+    <index id="37" parent="29" name="answer_pkey">
+      <ObjectId>179569</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="29" name="answer_pkey">
+      <ObjectId>179570</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>answer_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="29" name="fkqcy7ifhcy4vhebepa66le8u9y">
+      <ObjectId>179601</ObjectId>
+      <ColNames>poll</ColNames>
+      <RefTableId>179581</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>poll</RefTableName>
+      <RefKeyName>poll_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="40" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240492</StateNumber>
+      <SequenceName>pick_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;pick_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="41" parent="30" name="comment">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240492</StateNumber>
+    </column>
+    <column id="42" parent="30" name="answer_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>240492</StateNumber>
+    </column>
+    <column id="43" parent="30" name="poll">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>240492</StateNumber>
+    </column>
+    <column id="44" parent="30" name="user_id">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>240492</StateNumber>
+    </column>
+    <index id="45" parent="30" name="pick_pkey">
+      <ObjectId>179577</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="30" name="pick_pkey">
+      <ObjectId>179578</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pick_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="30" name="fk4w7q06o5jw6hm7a639ctflw3f">
+      <ObjectId>179606</ObjectId>
+      <ColNames>answer_id</ColNames>
+      <RefTableId>179565</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>answer</RefTableName>
+      <RefKeyName>answer_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="30" name="fktop4yd8uhilbto1ur7n17thvi">
+      <ObjectId>179611</ObjectId>
+      <ColNames>poll</ColNames>
+      <RefTableId>179581</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>poll</RefTableName>
+      <RefKeyName>poll_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="49" parent="30" name="fk8m36sh8megqggxo9xtt1kbew7">
+      <ObjectId>179616</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>179592</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="50" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240493</StateNumber>
+      <SequenceName>poll_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;poll_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="51" parent="31" name="question">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240493</StateNumber>
+    </column>
+    <column id="52" parent="31" name="topic">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240493</StateNumber>
+    </column>
+    <column id="53" parent="31" name="user_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>240493</StateNumber>
+    </column>
+    <index id="54" parent="31" name="poll_pkey">
+      <ObjectId>179588</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="31" name="poll_pkey">
+      <ObjectId>179589</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>poll_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="31" name="fkadks6q1hc5upvvuw1jhsjjcxc">
+      <ObjectId>179621</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>179592</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="57" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240494</StateNumber>
+      <SequenceName>users_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="58" parent="32" name="answers_given">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <column id="59" parent="32" name="credit">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <column id="60" parent="32" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <column id="61" parent="32" name="pass_word">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <column id="62" parent="32" name="questions_asked">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <column id="63" parent="32" name="user_name">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>240494</StateNumber>
+    </column>
+    <index id="64" parent="32" name="users_pkey">
+      <ObjectId>179599</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="32" name="users_pkey">
+      <ObjectId>179600</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
