@@ -57,4 +57,7 @@ public class PollService {
         return answeredPollIds;
     }
 
+    public void updatePoll(Long userId, String question) {
+        pollRepository.updatePoll(userId, question);
+    }
 }

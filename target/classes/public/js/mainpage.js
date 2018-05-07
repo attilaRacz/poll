@@ -89,7 +89,7 @@ function fireSavePollBtn() {
                     $(location).attr('href', window.location.href + "/");
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus + " YEEEEEEEEEEEEEE " + errorThrown)
+                    console.log(textStatus + " " + errorThrown)
                 }
             });
         }
