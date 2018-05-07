@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/pollApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/pollApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/InitializerBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/InitializerBean.java" />
-    </list>
+    <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -554,12 +551,12 @@
       <workItem from="1523443048058" duration="6888000" />
       <workItem from="1523603691318" duration="2026000" />
       <workItem from="1524040233028" duration="1831000" />
-      <workItem from="1525679745047" duration="3816000" />
+      <workItem from="1525679745047" duration="4034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87462000" />
+    <option name="totallyTimeSpent" value="87680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="40" width="1368" height="723" extended-state="6" />
