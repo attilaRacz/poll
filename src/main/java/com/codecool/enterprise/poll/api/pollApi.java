@@ -125,4 +125,15 @@ public class pollApi { //for dom.js ajax call
         pickService.addPick(pick);
         return "ok";
     }
+
+    @PostMapping(value = "/edit_poll")
+    public String editPoll(@RequestBody PollJSON pollData) {
+        //find user
+        Long userId = Long.parseLong(session.getAttribute("id"));
+        User user = userService.findUserById(userId);
+        //update the question of the poll
+        Poll poll = pollService.findMyPoll(user);
+        poll.setQuestion(pollData.getQuestion());
+        return "ok";
+    }
 }

@@ -56,4 +56,5 @@ public class PollService {
         }
         return answeredPollIds;
     }
+
 }
