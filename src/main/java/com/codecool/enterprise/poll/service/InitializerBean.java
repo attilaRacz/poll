@@ -15,7 +15,7 @@ public class InitializerBean {
         userService.addUser(new User("second", "second@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 1, 1, 1));
         userService.addUser(new User("third", "third@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 1));
         userService.addUser(new User("fourth", "fourth@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 1));
-        userService.addUser(new User("fifth", "fifth@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 1));
+        userService.addUser(new User("fifth", "fifth@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 1, 0, 1));
         userService.addUser(new User("sixth", "sixth@email.com", "$2a$10$XWDZyDhV1zY1eRsaY6ysg.k2jhbRXWowEpTyxaQArq1gh5rL2CIVq", 0, 0, 0));
         pollService.addPoll(new Poll(userService.findUserById(1), "Where shoud I go jogging in Budapest?", Topic.Sport));
         pollService.addPoll(new Poll(userService.findUserById(2), "Which soft drink do you like the most?", Topic.Food));
