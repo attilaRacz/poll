@@ -7,8 +7,12 @@ window.onload = function(){
 
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
-        //to be implemented
-        $(location).attr('href', "/answer");
+        //show textareas where you can give the question plus add answers
+        //save the new poll
+        //empty the poll and answers html
+        emptyPollBody();
+        showPoll();
+        showAnswers();
     })
 }
 
@@ -67,6 +71,12 @@ function showComments() {
             getCommentsByAnswerId(clickedAnswerId);
         });
     }
+}
+
+function emptyPollBody() {
+    document.getElementById("user").innerHTML = "";
+    document.getElementById("poll").innerHTML = "";
+    document.getElementById("answer").innerHTML = "";
 }
 
 function getCommentsByAnswerId(clickedAnswerId) {
