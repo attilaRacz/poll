@@ -113,6 +113,8 @@ public class pollApi { //for dom.js ajax call
         Long userId = Long.parseLong(session.getAttribute("id"));
         User user = userService.findUserById(userId);
         user.changeCredit(1);
+        //todo - update the credit of the owner of the poll
+
         //update the score of the answer
         Answer answer = answerService.getAnswerById(answerData.getId());
         answer.changeScore(1);

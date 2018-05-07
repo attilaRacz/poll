@@ -30,7 +30,13 @@ public class PollService {
 
     public Poll findNewPoll(List<Long> ids, User user) {
         if (pollRepository.findPollsByIdNotInAndUserNot(ids, user).size()>0) {
-            return pollRepository.findPollsByIdNotInAndUserNot(ids, user).get(0);
+            //returns the first poll where the owner has credit
+            List<Poll> pollsToAnswer = pollRepository.findPollsByIdNotInAndUserNot(ids, user);
+            for (Poll poll : pollsToAnswer) {
+                if (poll.getUser().getCredit()>0) {
+                    return poll;
+                }
+            }
         }
         return null;
     }
