@@ -130,6 +130,10 @@ public class pollApi { //for dom.js ajax call
     public String editPoll(@RequestBody PollJSON pollData) {
         Long userId = Long.parseLong(session.getAttribute("id"));
         pollService.updatePoll(userId, pollData.question);
+        User user = userService.findUserById(userId);
+        Poll myPoll = pollService.findMyPoll(user);
+        pickService.removePicks(myPoll);
+        answerService.removeAnswers(myPoll);
         return "ok";
     }
 }

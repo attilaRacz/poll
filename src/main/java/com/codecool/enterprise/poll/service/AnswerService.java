@@ -24,4 +24,8 @@ public class AnswerService {
     public List<Answer> getAnswers(Poll poll) {
         return answerRepository.findAnswersByPoll(poll);
     }
+
+    public void removeAnswers(Poll myPoll) {
+        answerRepository.removeAnswers(myPoll);
+    }
 }

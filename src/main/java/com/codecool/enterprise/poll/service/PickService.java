@@ -31,4 +31,8 @@ public class PickService {
     public List<Pick> findPicksByUser(User user) {
         return pickRepository.findPicksByUser(user);
     }
+
+    public void removePicks(Poll myPoll) {
+        pickRepository.removePicks(myPoll);
+    }
 }
