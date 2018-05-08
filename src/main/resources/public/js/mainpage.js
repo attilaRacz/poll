@@ -5,8 +5,6 @@ window.onload = function(){
     showAnswers();
 };
 
-var answerNumber = 0;
-
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
         //empty the poll and answers html
@@ -54,11 +52,9 @@ function showPollEdit() {
                 $("#user").append(`hello <strong>${poll.user.userName}</strong>, edit your question here:`);
                 $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="${poll.question}"/>`);
             } else {
-                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Give the question of your poll"/>`);
+                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Add a question for your poll"/>`);
             }
-            $("#answer").append(`<div><button class="newanswer-button" type="button">Add new answer</button></div>`);
             $("#answer").append(`<div><button class="savepoll-button" type="button">Save poll</button></div>`);
-            fireAddNewAnswerBtn();
             fireSavePollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {
@@ -93,13 +89,6 @@ function fireSavePollBtn() {
                 }
             });
         }
-    })
-}
-
-function fireAddNewAnswerBtn() {
-    $('.newanswer-button').click(function(event){
-        answerNumber += 1;
-        $("#answer").append(`<input id="poll_answer_` + answerNumber + `" name="poll_answer_` + answerNumber + `" placeholder="Answer ` + answerNumber + `" /></br>`);
     })
 }
 
