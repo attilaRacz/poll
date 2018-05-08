@@ -4,25 +4,18 @@ window.onload = function(){
     showPoll();
     showAnswers();
     fireNewAnswerBtn();
-    drawChart();
 };
 
+var piechart = [
+    ['Answer', 'number']
+];
 
 function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 8],
-        ['Friends', 2],
-        ['Eat', 2],
-        ['TV', 3],
-        ['Gym', 2],
-        ['Sleep', 7]
-    ]);
+    var data = google.visualization.arrayToDataTable(piechart);
 
-    // Optional; add a title and set the width and height of the chart
-    var options = {'title':'My Average Day', 'width':400, 'height':300};
+    //Set the width and height of the chart
+    var options = {'width':400, 'height':300};
 
-    // Display the chart inside the <div> element with id="piechart"
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
@@ -142,10 +135,12 @@ function showAnswers() {
         dataType: 'json',
         success: function(answers){
             $.each(answers, function(i, oneAnswer){
+                piechart.push([answers[i].answer, answers[i].score]);
                 $("#answer").append(`
                     <p class="anAnswer" id="${answers[i].id}"><strong>${answers[i].answer}</strong> votes: ${answers[i].score}</p>`);
             });
             showComments();
+            drawChart();
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)

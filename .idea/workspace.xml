@@ -4,9 +4,7 @@
     <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" afterPath="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/js/mainpage.js" afterPath="$PROJECT_DIR$/target/classes/public/js/mainpage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/mypoll.html" afterPath="$PROJECT_DIR$/target/classes/templates/mypoll.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,21 +50,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mypoll.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mypoll.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="20" column="101" lean-forward="false" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="101" />
+            <state relative-caret-position="107">
+              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainpage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -162,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/pollApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/dom.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/piechart.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
       </list>
     </option>
   </component>
@@ -509,12 +507,12 @@
       <workItem from="1524040233028" duration="1831000" />
       <workItem from="1525679745047" duration="19172000" />
       <workItem from="1525722675009" duration="802000" />
-      <workItem from="1525764122765" duration="13244000" />
+      <workItem from="1525764122765" duration="15406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116864000" />
+    <option name="totallyTimeSpent" value="119026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="40" width="1368" height="723" extended-state="6" />
@@ -971,18 +969,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="107">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="20" column="101" lean-forward="false" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="101" />
+        <state relative-caret-position="153">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
