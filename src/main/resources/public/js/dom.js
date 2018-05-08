@@ -1,6 +1,5 @@
 window.onload = function(){
     showPoll();
-    showAnswers();
     fireToMyPollBtn();
 };
 
@@ -12,7 +11,8 @@ function showPoll() {
         success: function(poll){
             if (poll !== null) {
                 $("#user").append(`question by <strong>${poll.user.userName}</strong>`);
-                $("#poll").append(`${poll.question}`)
+                $("#poll").append(`${poll.question}`);
+                showAnswers();
             } else {
                 $("#mainContainer").hide();
                 document.body.innerHTML += '<div class="container"><h2>You answered all the polls, thank you! Come back later for more!</h2></div>';
@@ -105,7 +105,7 @@ function fireButton() {
                 data: JSON.stringify(data),
                 success: function (response) {
                     console.log("Pick post request sent to server" + data);
-                    $(location).attr('href', window.location.href + "/");
+                    $(location).attr('href', window.location.href);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus + " " + errorThrown)

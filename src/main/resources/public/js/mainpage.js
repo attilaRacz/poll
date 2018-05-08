@@ -36,7 +36,7 @@ function fireNewAnswerBtn() {
                 data: JSON.stringify(data),
                 success: function (response) {
                     console.log("New answer post request sent to server" + data);
-                    $(location).attr('href', window.location.href + "/");
+                    $(location).attr('href', window.location.href);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus + " " + errorThrown)
@@ -89,10 +89,8 @@ function showPollEdit() {
 
 function fireSavePollBtn() {
     $('.savepoll-button').click(function(event){
-        //todo - send poll data to server
         let data = {
             'question': $('#poll_question').val(),
-            //todo - get all answers and organise them into JSON
         };
 
         if (!data.question) {
@@ -106,7 +104,7 @@ function fireSavePollBtn() {
                 success: function (response) {
                     console.log("Poll edit request sent to server" + data);
                     //todo - just simply show my poll with AJAX
-                    $(location).attr('href', window.location.href + "/");
+                    $(location).attr('href', window.location.href);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus + " " + errorThrown)
