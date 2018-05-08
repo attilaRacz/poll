@@ -4,7 +4,28 @@ window.onload = function(){
     showPoll();
     showAnswers();
     fireNewAnswerBtn();
+    drawChart();
 };
+
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work', 8],
+        ['Friends', 2],
+        ['Eat', 2],
+        ['TV', 3],
+        ['Gym', 2],
+        ['Sleep', 7]
+    ]);
+
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':'My Average Day', 'width':400, 'height':300};
+
+    // Display the chart inside the <div> element with id="piechart"
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}
 
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
@@ -78,7 +99,7 @@ function showPollEdit() {
             } else {
                 $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Add a question for your poll"/>`);
             }
-            $("#answer").append(`<div><button class="savepoll-button" type="button">Save poll</button></div>`);
+            $("#poll").append(`<div><button class="savepoll-button" type="button">Save poll</button></div>`);
             fireSavePollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {
@@ -147,7 +168,7 @@ function showComments() {
 function emptyPollBody() {
     document.getElementById("user").innerHTML = "";
     document.getElementById("poll").innerHTML = "";
-    document.getElementById("answer").innerHTML = "";
+    document.getElementById("answer_menu").innerHTML = "";
 }
 
 function getCommentsByAnswerId(clickedAnswerId) {

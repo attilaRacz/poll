@@ -16,6 +16,9 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <script defer="defer" src="/js/mainpage.js"></script>
+    <!-- Load google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">google.charts.load('current', {packages: ['corechart']});</script>
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
@@ -31,19 +34,25 @@
     <div id="poll_form">
         <h4 id="user"></h4>
         <h2 id="poll"></h2>
-        <form action="/answer_poll" method="post">
-            <fieldset id="answer">
-            </fieldset>
-        </form>
-        <div>
-            <input id="new_answer" name="new_answer" placeholder="add a new answer"/>
-            <button class="newanswer-button" type="button">Add</button>
+
+        <!--piechart-->
+        <div id="piechart"></div>
+
+        <div id="answer_menu">
+            <form action="/answer_poll" method="post">
+                <fieldset id="answer">
+                </fieldset>
+            </form>
+            <div>
+                <input id="new_answer" name="new_answer" placeholder="add a new answer"/>
+                <button class="newanswer-button" type="button">Add</button>
+            </div>
+            <div id="comments_container">
+                <h4>Comments on this answer:</h4>
+                <ul id="comments">
+                </ul>
+            </div>
         </div>
-    </div>
-    <div id="comments_container">
-        <h4>Comments on this answer:</h4>
-        <ul id="comments">
-        </ul>
     </div>
 </div>
 </body>
