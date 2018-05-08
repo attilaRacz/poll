@@ -126,6 +126,16 @@ public class pollApi { //for dom.js ajax call
         return "ok";
     }
 
+    @PostMapping(value = "/save_new_answer")
+    public String saveNewAnswer(@RequestBody AnswerJSON answerData) {
+        Long userId = Long.parseLong(session.getAttribute("id"));
+        User user = userService.findUserById(userId);
+        Poll myPoll = pollService.findMyPoll(user);
+        Answer newAnswer = new Answer(myPoll, answerData.getAnswer(), 0);
+        answerService.addAnswer(newAnswer);
+        return "ok";
+    }
+
     @PostMapping(value = "/edit_poll")
     public String editPoll(@RequestBody PollJSON pollData) {
         Long userId = Long.parseLong(session.getAttribute("id"));

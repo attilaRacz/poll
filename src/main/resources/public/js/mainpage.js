@@ -3,16 +3,13 @@ window.onload = function(){
     fireAnswerBtn();
     showPoll();
     showAnswers();
+    fireNewAnswerBtn();
 };
 
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
-        //empty the poll and answers html
         emptyPollBody();
-        //todo - show textareas where you can give the question plus add answers
         showPollEdit();
-        //todo - save the new poll
-
     })
 }
 
@@ -20,6 +17,33 @@ function fireAnswerBtn() {
     $('.answerpolls-button').click(function(event){
         $(location).attr('href', "/answer");
     })
+}
+
+function fireNewAnswerBtn() {
+    $('.newanswer-button').click(function(event){
+        event.preventDefault();
+        let data = {
+            'answer': $('#new_answer').val()
+        };
+
+        if (!data.answer) {
+            alert("Write an answer first");
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '/save_new_answer',
+                contentType: 'application/JSON',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log("New answer post request sent to server" + data);
+                    $(location).attr('href', window.location.href + "/");
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + " " + errorThrown)
+                }
+            });
+        }
+    });
 }
 
 function showPoll() {

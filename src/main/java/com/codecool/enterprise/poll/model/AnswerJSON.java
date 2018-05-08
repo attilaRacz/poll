@@ -2,6 +2,7 @@ package com.codecool.enterprise.poll.model;
 
 public class AnswerJSON {
     private Integer id;
+    private String answer;
     private String comment;
 
     public Integer getId() {
@@ -10,6 +11,14 @@ public class AnswerJSON {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public String getComment() {
