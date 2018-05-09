@@ -6,9 +6,7 @@ window.onload = function(){
     fireNewAnswerBtn();
 };
 
-var piechart = [
-    ['Answer', 'number']
-];
+var piechart = [];
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
@@ -134,6 +132,9 @@ function showAnswers() {
         type: 'GET',
         dataType: 'json',
         success: function(answers){
+            piechart = [];
+            piechart.push(['Answer', 'number']);
+            document.getElementById("answer").innerHTML = "";
             $.each(answers, function(i, oneAnswer){
                 piechart.push([answers[i].answer, answers[i].score]);
                 $("#answer").append(`
@@ -141,6 +142,7 @@ function showAnswers() {
             });
             showComments();
             drawChart();
+            setTimeout(showAnswers(), 10000);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/js/dom.js" afterPath="$PROJECT_DIR$/src/main/resources/public/js/dom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/answer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" afterPath="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/js/mainpage.js" afterPath="$PROJECT_DIR$/target/classes/public/js/mainpage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,20 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainpage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="137" column="69" lean-forward="true" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="69" />
+            <state relative-caret-position="287">
+              <caret line="145" column="10" lean-forward="true" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/dom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="864">
               <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
               <folding />
             </state>
@@ -103,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/poll</find>
       <find>answer&quot;</find>
       <find>das</find>
       <find>br</find>
@@ -133,6 +131,7 @@
       <find>edit</find>
       <find>emptypollb</find>
       <find>piechart</find>
+      <find>sett</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -179,10 +178,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/model/AnswerJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/pollApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/piechart.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/dom.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/mainpage.js" />
       </list>
     </option>
   </component>
@@ -529,12 +528,12 @@
       <workItem from="1525679745047" duration="19172000" />
       <workItem from="1525722675009" duration="802000" />
       <workItem from="1525764122765" duration="15953000" />
-      <workItem from="1525849723510" duration="1753000" />
+      <workItem from="1525849723510" duration="4991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121326000" />
+    <option name="totallyTimeSpent" value="124564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="40" width="1368" height="723" extended-state="6" />
@@ -549,7 +548,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34812286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34812286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -983,18 +982,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/dom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="137" column="69" lean-forward="true" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="69" />
+        <state relative-caret-position="864">
+          <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/dom.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mainpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="48" column="69" lean-forward="false" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+        <state relative-caret-position="287">
+          <caret line="145" column="10" lean-forward="true" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
           <folding />
         </state>
       </provider>
