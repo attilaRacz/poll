@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface AnswerRepository extends JpaRepository<Answer, Long> {
-    //find answer relating stuff
 
     List<Answer> findAnswersByPoll(Poll poll);
 

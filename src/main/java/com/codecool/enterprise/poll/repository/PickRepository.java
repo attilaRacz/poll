@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface PickRepository extends JpaRepository<Pick, Long> {
-    //find pick relating stuff
 
     List<Pick> findPicksByPoll(Poll poll);
 

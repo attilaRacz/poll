@@ -1,6 +1,6 @@
 package com.codecool.enterprise.poll.api;
 
-public class AnswerJSON {
+class AnswerJSON {
     private Integer id;
     private String answer;
     private String comment;
@@ -25,7 +25,4 @@ public class AnswerJSON {
         return comment;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 }

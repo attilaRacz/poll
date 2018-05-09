@@ -24,10 +24,6 @@ public class PollService {
         return pollRepository.findOne(id);
     }
 
-    public Poll getPoll(long id) {
-        return pollRepository.findPollById(id);
-    }
-
     public Poll findNewPoll(List<Long> ids, User user) {
         if (pollRepository.findPollsByIdNotInAndUserNot(ids, user).size()>0) {
             //returns the first poll where the owner has credit

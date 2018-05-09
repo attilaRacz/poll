@@ -1,6 +1,6 @@
 package com.codecool.enterprise.poll.api;
 
-public class IdJSON {
+class IdJSON {
     private Integer id;
 
     public int getId() {

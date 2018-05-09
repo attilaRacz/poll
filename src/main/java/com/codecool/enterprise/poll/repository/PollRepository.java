@@ -10,9 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface PollRepository extends JpaRepository<Poll, Long> {
-    //find poll relating stuff
-
-    Poll findPollById(long id);
 
     List<Poll> findPollByUserNot(User user);
 

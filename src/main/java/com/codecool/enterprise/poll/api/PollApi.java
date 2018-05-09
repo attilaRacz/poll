@@ -15,7 +15,7 @@ import com.codecool.enterprise.poll.session.UserSession;
 import java.util.List;
 
 @RestController
-public class PollApi { //for answer_dom.js ajax call
+public class PollApi { //for answer_dom.js ajax calls
 
     @Autowired
     private UserSession session;
@@ -137,7 +137,7 @@ public class PollApi { //for answer_dom.js ajax call
     @PostMapping(value = "/edit_poll")
     public String editPoll(@RequestBody PollJSON pollData) {
         Long userId = Long.parseLong(session.getAttribute("id"));
-        pollService.updatePoll(userId, pollData.question);
+        pollService.updatePoll(userId, pollData.getQuestion());
         User user = userService.findUserById(userId);
         Poll myPoll = pollService.findMyPoll(user);
         pickService.removePicks(myPoll);
