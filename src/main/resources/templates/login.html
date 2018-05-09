@@ -22,7 +22,7 @@
 <div>
     <form>
         <div id="login-form">
-            <input id="login_email" type="text" class="username_login" name="login_email"
+            <input id="login_email" type="text" class="email_login" name="login_email"
                    placeholder="e-mail address" required="true"/>
             <input id="login_password" type="password" class="password_login" name="login_password"
                    placeholder="Password" required="true"/>
@@ -32,6 +32,19 @@
         </div>
         <div>
             <button class="login-button" type="button">Login</button>
+        </div>
+    </form>
+    <form>
+        <div id="registration-form">
+            <input id="register_email" type="text" class="email_register" name="register_email"
+                   placeholder="e-mail address" required="true"/>
+            <input id="register_username" type="text" class="username_register" name="register_email"
+                   placeholder="username" required="true"/>
+            <input id="register_password" type="password" class="password_register" name="register_password"
+                   placeholder="Password" required="true"/>
+        </div>
+        <div>
+            <button class="register-button" type="button">Register</button>
         </div>
     </form>
 </div>
