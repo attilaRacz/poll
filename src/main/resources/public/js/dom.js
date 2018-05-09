@@ -3,6 +3,20 @@ window.onload = function(){
     fireToMyPollBtn();
 };
 
+var piechart = [
+    ['Answer', 'number']
+];
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable(piechart);
+
+    //Set the width and height of the chart
+    var options = {'width':400, 'height':300};
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}
+
 function showPoll() {
     $.ajax({
         url: '/getpoll',
@@ -32,6 +46,7 @@ function showAnswers() {
         dataType: 'json',
         success: function(answers){
             $.each(answers, function(i, oneAnswer){
+                piechart.push([answers[i].answer, answers[i].score]);
                 $("#answer").append(`
                     <label>${answers[i].answer}</label>
                     <input type="radio" name="answer" class="anAnswer" value="${answers[i].id}" id="${answers[i].id}"/>
@@ -39,6 +54,7 @@ function showAnswers() {
                     <br>`);
             });
             showComments();
+            drawChart();
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
