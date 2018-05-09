@@ -1,4 +1,4 @@
-package com.codecool.enterprise.poll.model;
+package com.codecool.enterprise.poll.api;
 
 public class IdJSON {
     private Integer id;
