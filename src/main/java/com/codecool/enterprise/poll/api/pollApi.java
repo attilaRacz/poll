@@ -17,7 +17,7 @@ import java.util.List;
 import static com.codecool.enterprise.poll.util.JsonUtil.toJson;
 
 @RestController
-public class pollApi { //for dom.js ajax call
+public class pollApi { //for answer_dom.js ajax call
 
     @Autowired
     private UserSession session;

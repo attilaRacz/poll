@@ -1,8 +1,8 @@
 window.onload = function(){
     fireChangePollBtn();
     fireAnswerBtn();
-    showPoll();
-    showAnswers();
+    showMyPoll();
+    showMyAnswers();
     fireNewAnswerBtn();
 };
 
@@ -12,10 +12,7 @@ var piechart = [
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
-
-    //Set the width and height of the chart
     var options = {'width':400, 'height':300};
-
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
@@ -23,7 +20,7 @@ function drawChart() {
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
         emptyPollBody();
-        showPollEdit();
+        pollEdit();
     })
 }
 
@@ -60,7 +57,7 @@ function fireNewAnswerBtn() {
     });
 }
 
-function showPoll() {
+function showMyPoll() {
     $.ajax({
         url: '/getmypoll',
         type: 'GET',
@@ -80,7 +77,7 @@ function showPoll() {
     });
 }
 
-function showPollEdit() {
+function pollEdit() {
     $.ajax({
         url: '/getmypoll',
         type: 'GET',
@@ -128,7 +125,7 @@ function fireSavePollBtn() {
     })
 }
 
-function showAnswers() {
+function showMyAnswers() {
     $.ajax({
         url: '/getmyanswers',
         type: 'GET',

@@ -9,10 +9,7 @@ var piechart = [
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
-
-    //Set the width and height of the chart
     var options = {'width':400, 'height':300};
-
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
@@ -72,7 +69,7 @@ function showComments() {
             getCommentsByAnswerId(clickedAnswerId);
         });
     }
-    fireButton();
+    fireChooseButton();
 }
 
 function getCommentsByAnswerId(clickedAnswerId) {
@@ -103,7 +100,7 @@ function getCommentsByAnswerId(clickedAnswerId) {
     });
 }
 
-function fireButton() {
+function fireChooseButton() {
     $('.pick-button').click(function(event){
         event.preventDefault();
         let data = {
