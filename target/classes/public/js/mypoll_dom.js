@@ -2,7 +2,6 @@ window.onload = function(){
     fireChangePollBtn();
     fireAnswerBtn();
     showMyPoll();
-    showMyAnswers();
     fireNewAnswerBtn();
 };
 
@@ -65,10 +64,11 @@ function showMyPoll() {
         success: function(poll){
             if (poll !== null) {
                 $("#user").append(`hello <strong>${poll.user.userName}</strong>, you asked the following:`);
-                $("#poll").append(`${poll.question}`)
+                $("#poll").append(`${poll.question}`);
+                showMyAnswers();
             } else {
-                $("#mainContainer").hide();
-                document.body.innerHTML += '<div class="container"><h2>You do not have an active poll right now.</h2></div>';
+                $("#answer_menu").hide();
+                $("#user").append(`You do not have an active poll`);
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
@@ -114,7 +114,6 @@ function fireSavePollBtn() {
                 data: JSON.stringify(data),
                 success: function (response) {
                     console.log("Poll edit request sent to server" + data);
-                    //todo - just simply show my poll with AJAX
                     $(location).attr('href', window.location.href);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {

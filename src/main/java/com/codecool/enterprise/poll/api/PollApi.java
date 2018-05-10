@@ -137,11 +137,17 @@ public class PollApi { //for answer_dom.js ajax calls
     @PostMapping(value = "/edit_poll")
     public String editPoll(@RequestBody PollJSON pollData) {
         Long userId = Long.parseLong(session.getAttribute("id"));
-        pollService.updatePoll(userId, pollData.getQuestion());
         User user = userService.findUserById(userId);
-        Poll myPoll = pollService.findMyPoll(user);
-        pickService.removePicks(myPoll);
-        answerService.removeAnswers(myPoll);
+        if (user.getQuestionsAsked() == 0) {
+            Poll firstPoll = new Poll(user, pollData.getQuestion(), Topic.Sport);
+            pollService.addPoll(firstPoll);
+        } else {
+            pollService.updatePoll(userId, pollData.getQuestion());
+            Poll myPoll = pollService.findMyPoll(user);
+            pickService.removePicks(myPoll);
+            answerService.removeAnswers(myPoll);
+        }
+
         return "ok";
     }
 }
