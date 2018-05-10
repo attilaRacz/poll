@@ -42,6 +42,65 @@ public class AuthController {
         return "";
     }
 
+    @PostMapping(value = "/api/register")
+    public String handleRegisterInput(@RequestBody UserJSON registerData) {
+        ErrorJSON result = validateRegister(registerData);
+        if (result.isValid()) {
+            String hashedPassword = hashpw(registerData.getPassword(), gensalt());
+            User user = new User(
+                    registerData.getUserName().trim(),
+                    registerData.getEmail().trim(),
+                    hashedPassword,
+                    1,
+                    0,
+                    0
+            );
+            userService.addUser(user);
+            Long id = userService.findUserByEmail(registerData.getEmail()).getId();
+            session.setAttribute("id", String.valueOf(id));
+            session.setAttribute("email", registerData.getEmail());
+        }
+        return toJson(result);
+    }
+
+    private ErrorJSON validateRegister(UserJSON json) {
+        ErrorJSON errors = new ErrorJSON();
+        boolean isvalid = true;
+
+        if (json.containsEmptyFields()) {
+            errors.setAllFieldsRequired(true);
+            return errors;
+        }
+        String email = json.getEmail().trim();
+        String userName = json.getUserName().trim();
+        String password = json.getPassword();
+        String passwordCheck = json.getPasswordCheck();
+
+        if (!password.equals(passwordCheck)) {
+            errors.setPasswordMismatch(true);
+            return errors; // no point going further if passwords are wrong
+        }
+
+        if (!userName.matches("[a-zA-Z0-9]+")) {
+            errors.setInvalidName(true);
+            isvalid = false;
+        }
+
+        if (!email.contains("@")) {
+            errors.setEmailInvalid(true);
+            isvalid = false;
+        }
+
+        User potentialUser = userService.findUserByEmail(email);
+        if (potentialUser != null) {
+            errors.setEmailExists(true);
+            isvalid = false;
+        }
+
+        errors.setValid(isvalid);
+        return errors;
+    }
+
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logOut() {
         session.clear();

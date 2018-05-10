@@ -48,10 +48,11 @@ function fireRegisterButton() {
         event.preventDefault();
         let data = {
             'email': $('#register_email').val(),
-            'username': $('#register_username').val(),
+            'userName': $('#register_username').val(),
             'password': $('#register_password').val(),
-            'passwordcheck': $('#register_password_check').val()
+            'passwordCheck': $('#register_password_check').val()
         };
+        console.log(data);
         $.ajax({
             type: 'POST',
             contentType: 'application/JSON',
