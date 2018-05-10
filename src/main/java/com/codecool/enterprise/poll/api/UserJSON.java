@@ -36,9 +36,7 @@ class UserJSON {
 
     public boolean containsEmptyFields() {
         for (String field : getValues()) {
-            System.out.println(field);
             if (field == null || field.equals("")) {
-                System.out.println("in" + field);
                 return true;
             }
         }

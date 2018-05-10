@@ -19,6 +19,7 @@ function drawChart() {
 function fireChangePollBtn() {
     $('.changemypoll-button').click(function(event){
         emptyPollBody();
+        $(".changemypoll-button").hide();
         pollEdit();
     })
 }
@@ -89,7 +90,7 @@ function pollEdit() {
             } else {
                 $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Add a question for your poll"/>`);
             }
-            $("#poll").append(`<div><button class="savepoll-button" type="button">Save poll</button></div>`);
+            $("#buttons").append(`<button class="savepoll-button" type="button">Save poll</button>`);
             fireSavePollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {
