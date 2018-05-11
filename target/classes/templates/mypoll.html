@@ -22,31 +22,43 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
-<div id="mainContainer" class="container">
-    <div id="poll_form">
-        <div id="buttons">
-            <button class="changemypoll-button" type="button">Create a new poll</button>
-            <button class="answerpolls-button" type="button">Answer polls!</button>
-        </div>
-        <h4 id="user"></h4>
-        <h2 id="poll"></h2>
-        <div id="piechart"></div>
-        <div id="answer_menu">
-            <form action="/answer_poll" method="post">
-                <fieldset id="answer">
-                </fieldset>
-            </form>
-            <div>
-                <input id="new_answer" name="new_answer" placeholder="add a new answer"/>
-                <button class="newanswer-button" type="button">Add</button>
+    <div id="mainContainer" class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div id="poll_form" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div id="buttons">
+                                <button class="changemypoll-button" type="button">Create a new poll</button>
+                                <button class="answerpolls-button" type="button">Answer polls!</button>
+                            </div>
+                            <h4 id="user"></h4>
+                        </div>
+                        <div class="panel-body">
+                            <h2 id="poll"></h2>
+                            <div id="piechart"></div>
+                            <div id="answer_menu">
+                                <form action="/answer_poll" method="post">
+                                    <fieldset id="answer">
+                                    </fieldset>
+                                </form>
+                                <div>
+                                    <input id="new_answer" name="new_answer" placeholder="add a new answer"/>
+                                    <button class="newanswer-button" type="button">Add</button>
+                                </div>
+                                <div class="panel-footer">
+                                    <h4>Comments on this answer:</h4>
+                                    <ul id="comments">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="comments_container">
-                <h4>Comments on this answer:</h4>
-                <ul id="comments">
-                </ul>
-            </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
-</div>
 </body>
 </html>
