@@ -21,4 +21,8 @@ public class UserService {
     public User findUserByEmail(String email) {
         return userRepository.findUserByEmail(email);
     }
+
+    public void updateUser(long UserId, Integer questionsAsked) {
+        userRepository.updateUser(UserId, questionsAsked);
+    }
 }

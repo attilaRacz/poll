@@ -147,7 +147,8 @@ public class PollApi { //for answer_dom.js ajax calls
             pickService.removePicks(myPoll);
             answerService.removeAnswers(myPoll);
         }
-
+        user.changeQuestionsAsked(1);
+        userService.updateUser(userId, user.getQuestionsAsked());
         return "ok";
     }
 }

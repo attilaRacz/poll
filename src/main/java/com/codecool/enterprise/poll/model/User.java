@@ -85,8 +85,8 @@ public class User {
         return questionsAsked;
     }
 
-    public void setQuestionsAsked(int questionsAsked) {
-        this.questionsAsked = questionsAsked;
+    public void changeQuestionsAsked(int toAdd) {
+        this.questionsAsked += toAdd;
     }
 
     public void changeCredit(int toAdd) {
