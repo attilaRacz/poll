@@ -9,7 +9,7 @@ var piechart = [
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
-    var options = {'width':400, 'height':300};
+    var options = {'width':400, 'height':300, backgroundColor: '#0E76FB', is3D: true};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
@@ -26,7 +26,11 @@ function showPoll() {
                 showAnswers();
             } else {
                 $("#mainContainer").hide();
-                document.body.innerHTML += '<div class="container"><h2>You answered all the polls, thank you! Come back later for more!</h2></div>';
+                document.body.innerHTML += '' +
+                    '<div class="container">' +
+                    '   <h2>You answered all the polls, thank you! Come back later for more!</h2>' +
+                    '   <button class="mypoll-button btn btn-lg" type="button">Back to my poll</button>' +
+                    '</div>';
             }
             fireToMyPollBtn();
         },

@@ -11,7 +11,7 @@ var piechart = [
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
-    var options = {'width':400, 'height':300};
+    var options = {'width':400, 'height':300, backgroundColor: '#0E76FB', is3D: true};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
@@ -86,11 +86,11 @@ function pollEdit() {
         success: function(poll){
             if (poll !== null) {
                 $("#user").append(`hello <strong>${poll.user.userName}</strong>, edit your question here:`);
-                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="${poll.question}"/>`);
+                $("#poll").append(`<input id="poll_question" name="poll_question" class="new_poll_question" placeholder="${poll.question}"/>`);
             } else {
-                $("#poll").append(`<input id="poll_question" name="poll_question" placeholder="Add a question for your poll"/>`);
+                $("#poll").append(`<input id="poll_question" name="poll_question" class="new_poll_question" placeholder="Add a question for your poll"/>`);
             }
-            $("#buttons").append(`<button class="savepoll-button" type="button">Save poll</button>`);
+            $("#buttons").append(`<button class="savepoll-button btn btn-lg" type="button">Save poll</button>`);
             fireSavePollBtn();
         },
         error: function(jqXHR, textStatus, errorThrown) {

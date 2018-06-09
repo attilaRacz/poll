@@ -24,38 +24,44 @@
 <body>
 <div id="mainContainer" class="container">
     <div class="row">
-        <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div id="poll_form" class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div>
-                            <button class="mypoll-button" type="button">Back to my poll</button>
-                        </div>
-                    <h4 id="user"></h4>
-                    </div>
-                    <div class="panel-body">
-                        <h2 id="poll"></h2>
-                        <div id="piechart"></div>
+            <button class="mypoll-button btn btn-lg" type="button">Back to my poll</button>
+        </div>
+    </div>
+    <div class="row">
+        <div id="user" class="col-md-12"></div>
+    </div>
+    <div class="row">
+        <div id="poll" class="col-md-12 question"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="poll_form">
+                <div class="pan">
+                    <div class="pan-body">
                         <form action="/answer_poll" method="post">
                             <fieldset id="answer">
                             </fieldset>
                         </form>
                     </div>
                     <div>
-                        <button class="pick-button" type="button">Choose</button>
+                        <button class="pick-button btn btn-lg" type="button">Choose</button>
                     </div>
-                    <h4>Your comment:</h4>
+                    <div class="text">
+                        Your comment:
+                    </div>
                     <input id="user_comment" name="user_comment" placeholder="Write your comment here..."/>
-                    <div class="panel-footer">
-                        <h4>Comments on this answer:</h4>
+                    <div class="text">
+                        Comments on this answer:
                         <ul id="comments">
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div id="piechart"></div>
+        </div>
     </div>
 </div>
 </body>
