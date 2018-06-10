@@ -78,6 +78,15 @@ h4 {
     width: 100%;
 }
 
+.logout-button {
+    background-color: rgb(265,79,10);
+    float: right;
+}
+
+.logout-button:hover {
+    background-color: rgb(275,89,20);
+}
+
 #user {
     font-size: 18px;
     padding-top: 10px;
