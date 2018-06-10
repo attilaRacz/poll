@@ -80,11 +80,14 @@ h4 {
 
 .logout-button {
     background-color: rgb(265,79,10);
+    color: black;
     float: right;
 }
 
 .logout-button:hover {
     background-color: rgb(275,89,20);
+    color: black;
+    float: right;
 }
 
 #user {

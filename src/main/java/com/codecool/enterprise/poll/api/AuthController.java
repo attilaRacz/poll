@@ -4,6 +4,7 @@ import com.codecool.enterprise.poll.model.User;
 import com.codecool.enterprise.poll.service.UserService;
 import com.codecool.enterprise.poll.session.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -99,11 +100,5 @@ public class AuthController {
 
         errors.setValid(isvalid);
         return errors;
-    }
-
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public String logOut() {
-        session.clear();
-        return "redirect:/";
     }
 }

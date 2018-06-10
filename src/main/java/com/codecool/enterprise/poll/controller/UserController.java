@@ -72,4 +72,10 @@ public class UserController {
             return "answer";
         }
     }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logOut() {
+        session.clear();
+        return "redirect:/";
+    }
 }

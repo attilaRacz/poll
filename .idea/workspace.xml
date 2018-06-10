@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/codecool/enterprise/poll/api/AuthController.class" afterPath="$PROJECT_DIR$/target/classes/com/codecool/enterprise/poll/api/AuthController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/answer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/css/main.css" afterPath="$PROJECT_DIR$/target/classes/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/answer.html" afterPath="$PROJECT_DIR$/target/classes/templates/answer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/mypoll.html" afterPath="$PROJECT_DIR$/target/classes/templates/mypoll.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,15 +57,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="52" />
-              <folding>
-                <element signature="e#2055#2062#1" expanded="true" />
-                <element signature="e#3305#3312#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,10 +81,42 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="91" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mypoll_dom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,10 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeq</find>
-      <find>remo</find>
-      <find>long</find>
-      <find>change</find>
       <find>300</find>
       <find>your</find>
       <find>br</find>
@@ -114,9 +156,13 @@
       <find>&quot;add&quot;</find>
       <find>back</find>
       <find>will</find>
-      <find>conf</find>
-      <find>btn</find>
       <find>quest</find>
+      <find>conf</find>
+      <find>log</find>
+      <find>btn</find>
+      <find>lo</find>
+      <find>return</find>
+      <find>model</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -143,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/poll.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/model/Answer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/model/Pick.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/InitializerBean.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/AnswerService.java" />
@@ -161,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/repository/AnswerRepository.java" />
         <option value="/usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/String.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/ErrorJSON.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/user.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/UserJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/UserService.java" />
@@ -170,12 +214,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/repository/PollRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/service/PollService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/answer_dom.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/PollApi.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
       </list>
     </option>
   </component>
@@ -199,10 +245,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="-1" />
-    <option name="width" value="1336" />
-    <option name="height" value="663" />
+    <option name="x" value="2" />
+    <option name="y" value="40" />
+    <option name="width" value="1364" />
+    <option name="height" value="679" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -546,15 +592,15 @@
       <workItem from="1527236315278" duration="1927000" />
       <workItem from="1528357465658" duration="819000" />
       <workItem from="1528550325752" duration="6941000" />
-      <workItem from="1528648643409" duration="7129000" />
+      <workItem from="1528648643409" duration="10015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189557000" />
+    <option name="totallyTimeSpent" value="192443000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="-1" width="1368" height="723" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="715" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -565,7 +611,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.221843" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28498295" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
@@ -640,13 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/LoginJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -849,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/img/sky.jpg" />
     <entry file="das://table:/36c6297a/566208b9-e316-47f8-9d28-8c74f7162de6/pollapp.public.poll">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -890,25 +921,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="65" column="75" lean-forward="false" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/answer_dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="71" column="62" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -920,28 +936,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/PollApi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/LoginJSON.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/answer_dom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="1278">
+          <caret line="71" column="62" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="159" column="9" lean-forward="false" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+        <state relative-caret-position="18">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -949,28 +971,51 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="91" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/PollApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="131">
+          <caret line="108" column="19" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="52" />
+        <state relative-caret-position="353">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding>
-            <element signature="e#2055#2062#1" expanded="true" />
-            <element signature="e#3305#3312#1" expanded="true" />
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
