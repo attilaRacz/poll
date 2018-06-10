@@ -42,7 +42,10 @@ fieldset {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: mediumseagreen;
+    background-color: rgb(245,155,0);
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .btn-xs {
@@ -50,11 +53,10 @@ fieldset {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
-    background-color: mediumseagreen;
 }
 
 .btn:hover {
-    background-color: lightseagreen;
+    background-color: rgb(265,175,10);
 }
 
 #user {
