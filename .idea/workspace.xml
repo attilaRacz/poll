@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89f061ab-7fad-4a3d-b85d-8d160fe458be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/css/main.css" afterPath="$PROJECT_DIR$/target/classes/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/answer.html" afterPath="$PROJECT_DIR$/target/classes/templates/answer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,24 +49,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="131">
+              <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="52" />
+              <folding>
+                <element signature="e#2055#2062#1" expanded="true" />
+                <element signature="e#3305#3312#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="answer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer.html">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="124">
+              <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,8 +75,8 @@
       <file leaf-file-name="mypoll.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="126">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="41" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -98,9 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body</find>
-      <find>setq</find>
-      <find>update</find>
       <find>changeq</find>
       <find>remo</find>
       <find>long</find>
@@ -127,7 +122,10 @@
       <find>poll</find>
       <find>&quot;add&quot;</find>
       <find>back</find>
+      <find>will</find>
       <find>btn</find>
+      <find>quest</find>
+      <find>conf</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -170,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/LoginJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/repository/PickRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/repository/AnswerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="/usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/String.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/ErrorJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/AuthController.java" />
@@ -186,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/enterprise/poll/api/PollApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mypoll.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/main.css" />
       </list>
     </option>
@@ -557,12 +555,12 @@
       <workItem from="1527236315278" duration="1927000" />
       <workItem from="1528357465658" duration="819000" />
       <workItem from="1528550325752" duration="6941000" />
-      <workItem from="1528648643409" duration="2536000" />
+      <workItem from="1528648643409" duration="5927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184964000" />
+    <option name="totallyTimeSpent" value="188355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="-1" width="1368" height="723" extended-state="6" />
@@ -707,13 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -923,17 +914,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="159" column="9" lean-forward="false" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/answer_dom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="71" column="62" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -962,20 +947,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/mypoll_dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="159" column="9" lean-forward="false" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mypoll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="126">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="52" />
+          <folding>
+            <element signature="e#2055#2062#1" expanded="true" />
+            <element signature="e#3305#3312#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+        <state relative-caret-position="124">
+          <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
           <folding />
         </state>
       </provider>

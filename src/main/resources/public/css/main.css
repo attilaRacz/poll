@@ -20,6 +20,21 @@ fieldset {
     0px 18px 23px rgba(0,0,0,0.1);
 }
 
+input[type="text"], .password_register {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+p, li {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+h4 {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    color: white;
+}
+
 .anAnswer {
     padding: 5px;
     color: whitesmoke;
@@ -57,6 +72,10 @@ fieldset {
 
 .btn:hover {
     background-color: rgb(265,175,10);
+}
+
+.register-button, .login-button, .password_login {
+    width: 100%;
 }
 
 #user {
