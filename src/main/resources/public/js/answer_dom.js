@@ -9,7 +9,8 @@ var piechart = [
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(piechart);
-    var options = {'width':400, 'height':300, backgroundColor: '#0E76FB', is3D: true};
+    var chartwidth = $('#chartparent').width();
+    var options = {'width':chartwidth, 'height':300, backgroundColor: '#0E76FB', is3D: true, legend: {position: 'none'}};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
