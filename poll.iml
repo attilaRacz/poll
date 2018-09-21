@@ -94,5 +94,6 @@
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.mindrot:jbcrypt:0.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
   </component>
 </module>

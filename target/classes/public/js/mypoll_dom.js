@@ -130,7 +130,7 @@ function showMyAnswers() {
                     <p class="anAnswer" id="${answers[i].id}"><strong>${answers[i].answer}</strong> votes: ${answers[i].score}</p>`);
             });
             showComments();
-            drawChart();
+            drawChart(piechart);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus + " " + errorThrown)
@@ -182,12 +182,4 @@ function getCommentsByAnswerId(clickedAnswerId) {
             console.log(textStatus + " " + errorThrown)
         }
     });
-}
-
-function drawChart() {
-    var data = google.visualization.arrayToDataTable(piechart);
-    var chartwidth = $('#chartparent').width();
-    var options = {'width':chartwidth, 'height':300, backgroundColor: '#0E76FB', is3D: true, legend: {position: 'none'}};
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
 }
